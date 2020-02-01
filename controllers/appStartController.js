@@ -27,5 +27,8 @@ module.exports = function(app){
 			res.redirect('/api/mentor/home');
 		}
 	});
+	app.get('/api' , function(req , res){
+		res.send('hello world...');
+	});
 
 }
