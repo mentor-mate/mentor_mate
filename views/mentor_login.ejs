@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet"  href="/assets/login_style.css">
+	
+	<title>mentor mate app</title>
+</head>
+<body>
+	<div class="loginbox">
+		<img src="/assets/logo3.png" class="logo">
+		<h1>Log in as Mentor</h1>
+		<h3 class="color: red"><%= message %></h3>
+		<form method="post" action="/api/mentor/login">
+			<input type="text" name="username" placeholder="Username">
+			<input type="password" name="password" placeholder="Password">
+			<input type="submit" name="" value="Login">
+			<!--<a href="">Forget password?</a><br>-->
+			<a href="/api/mentor/signup">Don't have an account?</a>
+
+		</form>
+		
+		</ul>
+	</div>
+</body>
+</html>

@@ -1,0 +1,187 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <!--<link rel="stylesheet"  href="/assets/login_style.css">-->
+  
+  <script src="/assets/jquery-3.4.1.min.js"></script>
+  
+  <title>mentor mate app</title>
+  <script>
+    var check = false;
+    $(document).ready(function(){
+      $('#ask_button').on('click' , function(){
+        if (!check){
+          var data = '<form method = "post" action = "/api/user"><br><input type = "text" name = "question" placeholder = "Ask Question"><input type = "text" name = "prof" placeholder = "Prof. name"><button>Send</button></form>';
+          $('#textbox').html(data);
+          $('#ask_button').text("DON't ASK");
+          check = true;
+        }
+        else{
+          var data = '';
+          $('#textbox').html(data);
+          $('#ask_button').text("ASK QUESTION");
+          check = false;
+        } 
+        
+      });
+    });
+  </script>
+</head>
+<body>
+  <div>
+    
+    <% if(!m_check){
+          let picture_yes = false;
+    %>
+      <a href="/api/home">home</a><br>
+      <label class ="text-center">username: <%= user_session %></label><br>
+      <% for(let i = 0 ; i < data.length ; i++){
+          if(data[i].username == user_session){
+            for(let j = 0 ; j < picture.length ; j++){
+               if (picture[j].username == user_session){
+                  picture_yes = true;
+      %>
+                  <!-- <p><%= picture[j].username %></p> -->
+                  <a href="/api/user/picture"><img src="/assets/upload/<%= picture[j].picture %>" width = "100px" height ="100px"></a>
+
+
+      <%          break;
+               }
+                else  picture_yes = false;
+            }
+            if (!picture_yes){
+      %>
+              <a href="/api/user/picture">add picture</a>
+      <%        
+          }
+
+      %>
+           
+            
+              
+              <br>
+              <br>
+            
+            <label class ="text-center">full name: <%= data[i].full_name %></label><br>
+            <label class ="text-center">Enrollment No. : <%= data[i].enrollment_no %></label><br>
+            <label class ="text-center">Contact : <%= data[i].contact %></label><br>
+            <label class ="text-center">Date of birth : <%= data[i].dob %></label><br>
+    <%    }
+        }
+    }
+    else{
+      let picture_yes = false;
+    %>
+      <a href="/api/mentor/home">home</a><br>
+      <label class ="text-center">username: <%= mentor_session %></label><br>
+      <% for(let i = 0 ; i < mentor_data.length ; i++){
+          if(mentor_data[i].username == mentor_session){ 
+            for(let j = 0 ; j < picture.length ; j++){
+               if (picture[j].username == mentor_session){
+                  picture_yes = true;
+      %>
+                  <!-- <p><%= picture[j].username %></p> -->
+                  <a href="/api/mentor/user/picture"><img src="/assets/upload/<%= picture[i].picture %>" width = "100px" height ="100px"></a>
+
+
+      <%          break;
+               }
+                else  picture_yes = false;
+            }
+            if (!picture_yes){
+      %>
+              <a href="/api/mentor/user/picture">add picture</a><br><br>
+      <%        
+          }
+
+      %>
+            
+            <label class ="text-center">full name: <%=  mentor_data[i].full_name %></label><br>
+            <label class ="text-center">Professor Id. : <%=  mentor_data[i].enrollment_no %></label><br>
+            <label class ="text-center">Contact : <%=  mentor_data[i].contact %></label><br>
+            <label class ="text-center">Date of birth : <%=  mentor_data[i].dob %></label><br>
+      <%  }
+        }
+  } %>
+
+    
+  
+
+  
+    <% if (!m_check){ %>
+          <a name="edit" href ="/api/user/edit">Edit profile</a>
+  <%  }
+      else{ %>
+          <a name="edit" href ="/api/mentor/user/edit">Edit profile</a>
+  <%  } %>
+ 
+
+  </div>
+
+  
+  <% if(!m_check){%>
+    <div class="w3-col l8 s12">
+      <div>
+        <label ><button id="ask_button">ASK QUESTON</button></label> 
+      <div id="textbox"></div> 
+    </div>
+    <!-- Blog entry -->
+    <% for(let i = 0 ; i < post_data.length ; i++){ 
+        if(post_data[i].username == user_session){ %>
+          <div class="w3-card-4 w3-margin w3-white">
+          <!-- <img src="/w3images/woods.jpg" alt="Nature" style="width:100%"> -->
+            <div class="w3-container">
+              <h3><b><%= post_data[i].question %></b></h3>
+              <h5><a href="/api/home/professor/<%= post_data[i].prof %>"><%= post_data[i].prof %></a> <span class="w3-opacity">April 7, 2014</span></h5>
+            </div>
+
+            <div class="w3-container">
+              <p><%= post_data[i].solution %></p>
+              <div class="w3-row">
+                <div class="w3-col m8 s12">
+                  <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE » </b></button></p>
+                </div>
+                <div class="w3-col m4 w3-hide-small">
+                  <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-tag">0</span></span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      <%}
+      } 
+    }
+    else{ %>
+      <div class="w3-col l8 s12">
+      <!-- Blog entry -->
+      <% for(let i = 0 ; i < post_data.length ; i++){ 
+          if(post_data[i].prof == mentor_session){ %>
+            <div class="w3-card-4 w3-margin w3-white">
+              <!-- <img src="/w3images/woods.jpg" alt="Nature" style="width:100%"> -->
+              <div class="w3-container">
+                <h3><b><%= post_data[i].question %></b></h3>
+                <h5><a href="/api/mentor/home/student/<%= post_data[i].username %>"><%= post_data[i].username %></a> <span class="w3-opacity">April 7, 2014</span></h5>
+              </div>
+
+              <div class="w3-container">
+                <p><%= post_data[i].solution %></p>
+                <div class="w3-row">
+                  <div class="w3-col m8 s12">
+                    <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE » </b></button></p>
+                  </div>
+                  <div class="w3-col m4 w3-hide-small">
+                    <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-tag">0</span></span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+        <%}
+        } 
+    } %>
+ 
+  
+</body>
+</html>

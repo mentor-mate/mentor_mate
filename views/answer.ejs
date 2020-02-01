@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--<link rel="stylesheet"  href="/assets/login_style.css">-->
+  
+  <title>mentor mate app</title>
+</head>
+<body>
+  <div>
+    <a href="/api/mentor/home">home</a><br>
+    <label class ="text-center"><%= post_data[0].prof %></label>
+    <form method="post" action="/api/mentor/home/<%= post_data[0].id %>">
+      <label><b>Q. <%= post_data[0].question %></b></label><br>
+      <label> by <%= post_data[0].username %> </label><br><br>
+      <input type="text" name="solution" placeholder="Solution">
+      
+      <input type="submit" name="" value="Submit">
+    </form>
+    
+  </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <!--<link rel="stylesheet"  href="/assets/login_style.css">-->
+  
+  <title>mentor mate app</title>
+</head>
+<body>
+  <%if (!m_check){%>
+      <div>
+        <a href="/api/home">home</a><br>
+        <label>Your username: <%= user_session %></label><br><br><br>
+        <% for(let i = 0 ; i < data.length ; i++){
+              if(data[i].username == student){ %>
+                <label class ="text-center">username: <%= data[i].username %></label><br>
+                <label class ="text-center">full name: <%= data[i].full_name %></label><br>
+                <label class ="text-center">Enrollment No. : <%= data[i].enrollment_no %></label><br>
+                <label class ="text-center">Contact : <%= data[i].contact %></label><br>
+                <label class ="text-center">Date of birth : <%= data[i].dob %></label><br>
+          <%   }
+            }%>
+        </div>     
+<%  }
+    else if(m_check){%>
+      <div>
+        <a href="/api/mentor/home">home</a><br>
+        <label>Your username: <%= mentor_session %></label><br><br><br>
+        <% for(let i = 0 ; i < data.length ; i++){
+              if(data[i].username == student){ %>
+                <label class ="text-center">username: <%= data[i].username %></label><br>
+                <label class ="text-center">full name: <%= data[i].full_name %></label><br>
+                <label class ="text-center">Enrollment No. : <%= data[i].enrollment_no %></label><br>
+                <label class ="text-center">Contact : <%= data[i].contact %></label><br>
+                <label class ="text-center">Date of birth : <%= data[i].dob %></label><br>
+          <%   }
+            }%>
+        </div>  
+ <% } %>
+    
+    
+
+  
+    
+
+</body>
+</html>

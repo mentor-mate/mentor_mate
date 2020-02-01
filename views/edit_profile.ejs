@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--<link rel="stylesheet"  href="/assets/login_style.css">-->
+  
+  <title>mentor mate app</title>
+</head>
+<body>
+  <% if(!m_check){%>
+    <div>
+      <a href="/api/home">home</a><br>
+      <% 
+        for(let i = 0 ; i < data.length ; i++){
+          if(user_session == data[i].username){%>
+            <label class ="text-center"><%= user_session %></label>
+            <form method="post" action="/api/user/edit">
+                <input type="text" name="name" placeholder="Full Name" value="<%= data[i].full_name %>">
+                <input type="text" name="address" placeholder="Address" value="<%= data[i].address %>">
+                <input type="text" name="enrollment_no" placeholder="Enrollment_no" value="<%= data[i].enrollment_no %>">
+                <input type="text" name="contact" placeholder="contact" value="<%= data[i].contact %>">
+                <input type="text" name="dob" placeholder="dob" value="<%= data[i].dob %>">
+                <input type="submit" name="" value="Submit">
+            </form>
+    
+      <%   }
+        }
+      
+        if(!update_check){%>
+            <label class ="text-center"><%= user_session %></label>
+            <form method="post" action="/api/user/edit">
+              <input type="text" name="name" placeholder="Full Name">
+              <input type="text" name="address" placeholder="Address">
+              <input type="text" name="enrollment_no" placeholder="Enrollment_no">
+              <input type="text" name="contact" placeholder="contact">
+              <input type="text" name="dob" placeholder="dob">
+              <input type="submit" name="" value="Submit">
+            </form>
+    <% }%>
+  	
+    </div>
+  <%}
+    else if(m_check){%>
+        <div>
+      <a href="/api/mentor/home">home</a><br>
+      <% 
+        for(let i = 0 ; i < mentor_data.length ; i++){
+          if(mentor_session == mentor_data[i].username){%>
+            <label class ="text-center"><%= mentor_session %></label>
+            <form method="post" action="/api/mentor/user/edit">
+                <input type="text" name="name" placeholder="Full Name" value="<%= mentor_data[i].full_name %>">
+                <input type="text" name="address" placeholder="Address" value="<%= mentor_data[i].address %>">
+                <input type="text" name="prof_id" placeholder="prof id" value="<%= mentor_data[i].prof_id %>">
+                <input type="text" name="contact" placeholder="contact" value="<%= mentor_data[i].contact %>">
+                <input type="text" name="dob" placeholder="dob" value="<%= mentor_data[i].dob %>">
+                <input type="submit" name="" value="Submit">
+            </form>
+    
+      <%   }
+        }
+      
+        if(!update_check){%>
+            <label class ="text-center"><%= mentor_session %></label>
+            <form method="post" action="/api/mentor/user/edit">
+              <input type="text" name="name" placeholder="Full Name">
+              <input type="text" name="address" placeholder="Address">
+              <input type="text" name="prof_id" placeholder="prof id">
+              <input type="text" name="contact" placeholder="contact">
+              <input type="text" name="dob" placeholder="dob">
+              <input type="submit" name="" value="Submit">
+            </form>
+    <% }%>
+    
+    </div>
+  <%}%>
+  
+</body>
+</html>
