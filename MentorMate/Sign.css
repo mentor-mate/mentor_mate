@@ -1,0 +1,141 @@
+body{
+	background: url("wallpaper.jpg"); 
+}
+.base{
+	margin: 0;
+  overflow: hidden;
+  float: right;
+    height: 690px;
+  width:490px;
+}
+}
+.container-grid {
+		display : grid;
+		grid-template-rows : auto;
+		grid-gap :0px;
+		/*grid-template-rows : 100px 100px 100px;*/
+		grid-auto-columns  : auto;
+		background-color: white;
+    margin:auto;
+
+	}
+#register,#loginside{
+  margin-bottom: 20px;
+}
+
+.main{
+	box-shadow:0 0 5px rgba(25,25,25,0.3), 0 0 8px rgba(25,25,25,0.1) ;
+	border: 1px solid teal;
+	padding: 10px 19px;
+	background-color: white;
+}
+input[type="text"], input[type="email"], input[type="password"] {
+	grid-row: 1;
+	grid-column: 2;
+  font-size: 15px;
+  color: #fff;
+  text-align : center;
+  width: 94.5%;
+  display: block;
+  padding: 5px;
+  margin-top: 6px;
+    border-radius: 4px;
+  border: 2px solid rgba(0,0,0,0.8);
+  color: rgba(0,0,0,0.6);
+  font-family: 'Roboto', sans-serif;
+}
+@media only screen and (max-width:500px){
+   .base {
+   		padding : 50px;
+      width:100%;
+      margin-left: 0;
+      height :100%;
+   }
+   input[type="text"], input[type="email"], input[type="password"] {
+    width: 91%;
+  }
+}
+@media(max-width:200px) {
+	.base {
+   		padding : 50px;
+      width:100%;
+      margin-left: 0;
+   }
+	  input[type="text"], input[type="email"], input[type="password"] {
+    width: 91%;
+  }
+
+}
+@media only screen and (max-width:766px){
+   .base {
+   		padding : 50px 100px;
+      width:100%;
+      margin-left: 0;
+   }
+   input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+  }
+#registertab,#logintab{
+	width: 50%;
+	display: inline-block;
+	grid-auto-columns  : auto auto;
+	grid-auto-rows:  auto;
+  float:right;
+  height: 100%;
+}
+}
+@media(max-width:1000px) {
+	.base {
+   		padding : 50px 300px;
+      width:10%;
+      margin-left: 0;
+   }
+	  input[type="text"], input[type="email"], input[type="password"] {
+    width: 91%;
+  }
+
+}
+@media(max-width:1300px) {
+	.base {
+   		padding : 50px 30px;
+      width:100%;
+      margin-left: 0;
+   }
+	  input[type="text"], input[type="email"], input[type="password"] {
+    width: 91%;
+  }
+
+}
+input[type=submit] {
+  width: 95%;
+  font: bold 20px sans-serif ;
+  color: white;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+ background: black;
+  border: 0;
+  outline: none;
+  border-radius: 30px;
+}
+#registertab,#logintab{
+	color: teal;
+	padding: 5px;
+   font-size: bold 20px 'Roboto';
+}
+.active{
+	background: #d1d1d1;
+	color: teal;
+	padding: 5px;
+   font-size: 20px;
+}
+
+ .glyphicon{
+ 	font-size: 20px;
+
+ }
+ .text{
+ 	color : teal;
+ 	font-size: 20px;
+ }

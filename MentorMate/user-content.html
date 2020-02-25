@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>User-Content</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="newuser.css">
+
+</head>
+<body >
+
+<div class="w3-container">
+  
+
+
+
+
+<br><br>
+<br><br>
+<br><br><br>
+
+   
+ <div class="row">
+            <div class="col-sm-8">
+                <section class="main">
+                    <div class="box">
+                        <p class="title">
+                            <i class="fa fa-flag"></i> Posts
+                            <span>
+                    <button type="button" >Edit Pic </button>
+                    </span>
+                        </p>
+                        
+                        
+                        <div class="media">
+                            <div class="media-left media-top" >
+                                <img src="male.jpg" class="media-object" style="width:45px">
+                            </div>
+                            <div class="media-body" style="margin: 5px;">
+                                <h4 class="media-heading">(Guide Name) <small><i>Posted on January 11, 2020</i></small></h4>
+                                 <div class="textinput" placeholder="Comment"></div> 
+                                 <button class="readmore" type="button" >Read more </button>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media-left media-top" >
+                                <img src="male.jpg" class="media-object" style="width:45px">
+                            </div>
+                            <div class="media-body" style="margin: 5px;">
+                                <h4 class="media-heading">(Guide Name) <small><i>Posted on January 11, 2020</i></small></h4>
+                                 <div class="textinput" placeholder="Comment"></div> 
+                                 <button class="readmore" type="button" >Read more </button>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media-left media-top" >
+                                <img src="male.jpg" class="media-object" style="width:45px">
+                            </div>
+                            <div class="media-body" style="margin: 5px;">
+                                <h4 class="media-heading">(Guide Name) <small><i>Posted on January 11, 2020</i></small></h4>
+                                 <div class="textinput" placeholder="Comment"></div> 
+                                 <button class="readmore" type="button" >Read more </button>
+                            </div>
+                        </div>
+                </section>
+                
+            </div>
+        
+            <div class="col-sm-4">
+                <div id="aside" class="info">
+                    <div class="box">
+                        <p class="title">
+                            <i class="fa fa-info-circle"></i>Information
+                            <span>
+                            <button type="button" >Edit Pic </button>
+                            </span>
+                        </p>
+
+                        <p class="padd-top">
+                            <i class="fa fa-male"></i> Male
+                        </p>
+
+                        <p>
+                            <i class="fa fa-phone"></i> 170280107128
+                        </p>
+
+                        <p>
+                            <i class="fa fa-envelope"></i> jaykumardiu@gmail.com
+                        </p>
+
+                        <p>
+                            <i class="fa fa-home"></i> Bhoiwada Road, Diu - 362520
+                        </p>
+
+                    </div>
+
+                </div>
+                <br>
+                <div id="aside" class="info">
+                    <div class="box">
+                        <p class="title">
+                            <i class="fa fa-info-circle"></i>Contact
+                            <span>
+                    <button type="button" >Edit Pic </button>
+                    </span>
+                        </p>
+
+                        <p class="padd-top">
+                            <i class="fa fa-birthday-cake"></i> 16-11-1999
+                        </p>
+
+                        <p>
+                            <i class="fa fa-phone"></i> 9426332109
+                        </p>
+
+                        <p>
+                            <i class="fa fa-envelope"></i> jaykumardiu@gmail.com
+                        </p>
+
+                        <p>
+                            <i class="fa fa-home"></i> Bhoiwada Road, Diu - 362520
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <footer> </footer>
+    </div>
+</div>
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("header");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                if ($(document).scrollTop() > 50) {
+                    $("#img").addClass("ava1");
+                    $("#name").addClass("name1");
+                } else {
+                    $("#img").removeClass("ava1");
+                    $("#name").removeClass("name1");
+                }
+            });
+        });
+</script>
+</body>
+</html> 

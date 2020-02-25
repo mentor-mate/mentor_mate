@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="Userprofiles.css">
+    <link rel="stylesheet" type="text/css" href="Sign.css">
+</head>
+
+<body>
+	<div class="base">
+    <div class="main">
+        <div class="container-grid">
+                <br><br>
+            <ul class="nav nav-tabs nav-justified">
+                <li><a data-toggle="tab" href="#" id="registertab" class="active">Sign Up</a></li>
+                <li><a data-toggle="tab" href="#" id="logintab" >Sign In</a></li>
+            </ul>
+            <a href="#" style="font-size:24px ;color:red;" class="btn btn-block btn-social btn-google">
+                <span class="fa fa-google"></span> Sign in with Google
+            </a>
+			<br>
+            <div id="register">
+                <form action="#" method="post">
+                    <br><br>
+                    <div class="input-group">
+                         <span class="input-group-addon"><i class="glyphicon glyphicon-user transparent"></i></span>
+                        <input class="text" type="text" name="Username" placeholder="Username" required="">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                        <input class="text" type="email" name="email" placeholder="Email" required="">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                        <input class="text" type="password" name="password" placeholder="Password" required="">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-ok"></i></span>
+                        <input class="text" type="password" name="password" placeholder="Confirm Password" required="">
+                    </div>
+                    <br>
+                    <div class="wthree-text">
+                        <label class="anim">
+                            <input type="checkbox" required><span class="text"> I Agree To The Terms & Conditions</span>
+                        </label>
+                    </div>
+                    <br>
+                    <input type="submit" value="Register">
+                    <br>
+                </form>
+
+            </div>
+
+            <div id="loginside" hidden>
+            	<form action="#" method="post">
+                    <br><br><br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input class="text" type="text" name="Username" placeholder="Username" required="">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                        <input class="text" type="password" name="password" placeholder="Password" required="">
+                    </div>
+					 <br>
+                    <input type="submit" value="Login" style="margin-bottom: 20px;">
+                    <br><br><br><br><br><br>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+  
+    <script>
+var loginside=document.querySelector('#loginside');
+var register=document.querySelector('#register');
+var registertab=document.querySelector('#registertab');
+var logintab=document.querySelector('#logintab');
+var loginlink=document.querySelector('.loginlink');
+var registerlink=document.querySelector('.registerlink');
+
+registertab.addEventListener('click',function(){
+	registeractive();
+});
+
+logintab.addEventListener('click',function(){
+	loginactive();
+});
+
+loginlink.addEventListener('click',function(){
+	loginactive();
+});
+
+registerlink.addEventListener('click',function(){
+	registeractive();
+});
+
+
+function loginactive(){
+	loginside.style.display="block";
+	register.style.display="none";
+	logintab.classList.add('active');	
+	registertab.classList.remove('active');	
+    	
+}
+
+function registeractive(){
+	loginside.style.display="none";
+	register.style.display="block";	
+	registertab.classList.add('active');	
+	logintab.classList.remove('active');	
+    	
+}
+    </script>
+</body>
+
+</html>

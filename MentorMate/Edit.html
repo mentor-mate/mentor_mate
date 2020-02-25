@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>EditProfile</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="newuser.css">
+
+</head>
+<body >
+
+<div class="w3-container">
+<br>
+ <div class="row">
+            <div class="col-sm-3">
+            </div>
+        
+            <div class="col-sm-6">
+                <div class="one">
+                    <p class="title" >
+                            <i class="fa fa-info-circle"></i>Details
+                            <span>
+                            <a href="#" class="button" ><i style="font-size:24px; text-align: center; color:white;" class="fa">&#xf067;</i></a>
+                            </span>
+                        </p>
+                  <div id="aside" class="info">
+                    <div class="box">
+                        <p class="title">
+                            <i class="fa fa-info-circle"></i>Information
+                            <span>
+                            
+                            </span>
+                        </p>
+
+                        <p class="padd-top">
+                             <span class="input-group-text"><i class="fa fa-male">&nbsp;&nbsp;</i><input type="radio" name="gender" value="male" checked> Male &nbsp;&nbsp; <br>
+                                                         <input type="radio" name="gender" value="female"> Female &nbsp;
+                        </p>
+
+                        <p>
+                           <span class="input-group-text"> <i class="fa fa-phone"></i><input type="number" class="form-control" id="" placeholder="Phone No."></span>
+                        </p>
+
+                        <p>
+                           <span class="input-group-text"> <i class="fa fa-envelope"></i><input type="email" class="form-control" id="" placeholder="Email"></span>
+                        </p>
+
+                        <p>
+                           <span class="input-group-text"><i class="fa fa-home"></i> <input type="text" class="form-control" id="" placeholder="Local Address">
+                           </span>
+                        </p>
+
+                    </div>
+
+                </div>
+                <br>
+                <div id="aside" class="info">
+                    <div class="box">
+                        <p class="title">
+                            <i class="fa fa-info-circle"></i>Qualification
+                            <span >
+                            <a href="#" style="border-radius: 4px;" onclick="appendText()" ><i style="font-size:40px; text-align: center; color:black;float: right;" class="fa">&#xf067;</i></a>
+                            </span>
+                        </p>
+
+                        <p class="padd-top">
+                           <span class="input-group-text"><textarea class="form-control rounded-0 "  rows="2"></textarea>
+                           </span>   
+                        </p>
+
+
+
+                    </div>
+
+                </div>
+                <div id="aside" class="info">
+                    <div class="box">
+                        <p class="title">
+                            <i class="fa fa-info-circle"></i>Achievements
+
+                       <p class="padd-top">
+                           <span class="input-group-text"><i class="fa fa-birthday-cake"></i><input type="date" class="form-control" id="" placeholder="Date of Birth">
+                        </p>
+
+                        <p>
+                           <span class="input-group-text"> <i class="fa fa-phone"></i><input type="number" class="form-control" id="" placeholder="Phone No."></span>
+                        </p>
+
+                        <p>
+                           <span class="input-group-text"> <i class="fa fa-envelope"></i><input type="email" class="form-control" id="" placeholder="Email"></span>
+                        </p>
+
+                        <p>
+                           <span class="input-group-text"><i class="fa fa-home"></i> <input type="text" class="form-control" id="" placeholder="Local Address">
+                           </span>
+                        </p>
+
+                    </div>
+
+                </div>
+                <div id="aside" class="info">
+                    <div class="box">
+                        <p class="title">
+                            <i class="fa fa-info-circle"></i>Contact
+                        </p>
+
+                        <p class="padd-top">
+                           <span class="input-group-text"><i class="fa fa-birthday-cake"></i><input type="date" class="form-control" id="" placeholder="Date of Birth">
+                        </p>
+
+                        <p>
+                           <span class="input-group-text"> <i class="fa fa-phone"></i><input type="number" class="form-control" id="" placeholder="Phone No."></span>
+                        </p>
+
+                        <p>
+                           <span class="input-group-text"> <i class="fa fa-envelope"></i><input type="email" class="form-control" id="" placeholder="Email"></span>
+                        </p>
+
+                        <p>
+                           <span class="input-group-text"><i class="fa fa-home"></i> <input type="text" class="form-control" id="" placeholder="Local Address">
+                           </span>
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+        </div>
+    </div>
+<br>
+        <footer> </footer>
+    </div>
+</div>
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("header");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
+  $(document).ready(function () {
+     $("a").click(function () {
+        $("#txt1").val("I AM DISPLAYING IN THE TEXTAREA");
+     });
+  });
+
+  $('.add').click(function() {
+    $('.padd-top').append('<span class="input-group-text"><textarea class="form-control rounded-0 textinput" id="txt1" rows="4"></textarea></span>');
+});
+function appendText() {
+  var txt1 = '<p class="padd-top"><span class="input-group-text"><textarea class="form-control rounded-0 " rows="2"></textarea></span></p>';       
+  $(".box").append(txt1);   // Append new elements
+}
+</script>
+</body>
+</html> 

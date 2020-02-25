@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HomeMentor</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="newuser.css">
+<link rel="stylesheet" type="text/css" href="w3.css">
+<style type="text/css">
+.button1{
+  background-color: black;
+  border: none;
+  color: white;
+  height: 100%;
+  padding : 10px;
+  text-align: center;
+  text-decoration: none;
+  float: left;
+  margin-left: 0px;
+  font-size: 15px;
+  
+}
+.sticky {
+  position: fixed;
+  top: 120px;
+  width: 100%;
+}
+.ava1 {
+    margin-top: auto;
+    overflow: auto;
+    display: block;
+    vertical-align: right;
+}
+
+.ava1 img {
+    position: absolute;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+
+    margin: 10px 30%;
+    display: block;
+}
+.box{
+   display:block; 
+   padding:14px;
+   margin: 3px 0;
+   background:white;
+   width:100%;
+  box-shadow: 0 25px 25px 0px rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.media{
+   box-shadow: 0 25px 25px 0px rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.box2 {
+    display: block;
+    right: 0px;
+    background: white;
+    width: 18%;
+    height: 180px;
+  /*  box-shadow: 0 0 5px rgba(25, 25, 25, 0.3), 0 0 8px rgba(25, 25, 25, 0.1);*/
+    float: right;
+    position: fixed;
+    border-style: none;
+}
+
+.box3 {
+    display: block;
+    right: 0px;
+    background: white;
+    width: 18%;
+    height: 260px;
+    bottom: 1px;
+    /*box-shadow: 0 0 5px rgba(25, 25, 25, 0.3), 0 0 8px rgba(25, 25, 25, 0.1);*/
+    float: right;
+    position: fixed;
+    border-style: outset;
+}
+.space{
+      top: 200px;
+    position: fixed;
+    width: 200px;
+    right: 0px;
+   
+    float: right;
+}
+aside {
+    float: right;
+    margin-top: 0px;
+    height: 230px;
+    top: 200px;
+    position: fixed;
+    width: 100%;
+    right: 0px;
+}
+
+.name1 {
+    position: absolute;
+    font-size: 2px;
+    display: block;
+    color: black;
+    top: 170px;
+    left: 60px;
+}
+
+.logout1 {
+    position: absolute;
+    top: 185px;
+    left: 175px;
+}
+</style>
+</head>
+<body style="background-color:#EFF6A5;">
+
+
+  
+<div class="w3-row w3-top w3-small w3-grey w3-border">
+
+<header class="w3-container w3-top w3-center w3-grey w3-padding "> 
+  <h1><b>MENTOR MATE</b></h1>
+  <p>Where students meet <span class="w3-tag">Teachers</span></p>
+</header>
+<div class="w3-third w3-grey w3-container">
+</div>
+<!--
+<div class="w3-bar w3-small w3-black w3-border sticky">
+  <a href="#" class="w3-bar-item w3-button">Home</a>
+  <a href="#" class="w3-bar-item w3-button">Link 1</a>
+  <div class="w3-dropdown-hover">
+    <button class="w3-button">Dropdown</button>
+    <div class="w3-dropdown-content w3-bar-block w3-card-4">
+      <a href="#" class="w3-bar-item w3-button">Link 1</a>
+      <a href="#" class="w3-bar-item w3-button">Link 2</a>
+      <a href="#" class="w3-bar-item w3-button">Link 3</a>
+    </div>
+  </div>
+</div>
+</div>-->
+
+<div  class="w3-bar sticky w3-black w3-border w3-small ">
+
+  <a href="#" class="w3-bar-item w3-button w3-blue"><i class="fa fa-home"></i></a>
+
+<!--
+<div class="w3-bar-item w3-button">
+  <div class="w3-dropdown-hover">
+    <a href="#" class="w3-bar-item w3-button"><i class="fa fa-search"></i></a>
+    <div class="w3-dropdown-content w3-bar-block ">
+      <a href="#" class="w3-bar-item w3-button">Link 1</a>
+      <a href="#" class="w3-bar-item w3-button">Link 2</a>
+      <a href="#" class="w3-bar-item w3-button">Link 3</a>
+    </div>
+  </div>
+</div>-->
+
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-search"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-globe"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-sign-in"></i></a>
+  <a href="#" class="brand w3-button w3-bar-item ">Mentor Mate</a>
+</div>
+</div>
+
+<!--
+<div class="w3-bar w3-border w3-black w3-xxlarge">
+  <a href="#" class="w3-bar-item w3-button">Default</a>
+  <a href="#" class="w3-bar-item w3-button w3-hover-grey w3-text-grey w3-hover-text-white">Link 1</a>
+  <a href="#" class="w3-bar-item w3-button w3-hover-grey w3-text-grey w3-hover-text-white"><i class="fa fa-search"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-hover-grey w3-text-grey w3-hover-text-white"><i class="fa fa-envelope"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-hover-grey w3-text-grey w3-hover-text-white"><i class="fa fa-globe"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-hover-grey w3-text-grey w3-hover-text-white"><i class="fa fa-sign-in"></i></a>
+     <form class="w3-bar-item w3-button w3-hover-grey w3-text-grey w3-hover-text-white w3-small" action="post">
+      <div class="form-group w3-black">
+       <span class="input-group-text w3-black"> <input type="text" class="form-control" placeholder="Search"><i class="fa fa-search"></i></span>
+      </div>
+      
+    </form>
+</div>
+
+</div>
+--><br><br><br><br><br><br><br><br><br><br>
+<a href="#" class="btn button1 w3-fixed">>></a>
+
+  
+  <div class="row">
+    
+  <div class="col-sm-9">
+
+                <section class="main">
+                  
+                    <div class="box">
+                        <p class="title">
+                            <i class="fa fa-flag"></i> Posts
+                            <span>
+                    <a class="button" href="#" >Edit Pic </a>
+                    </span>
+                        </p>
+                        
+                        
+                        <div class="media">
+                            <div class="media-left media-top" >
+                                <img src="male.jpg" class="media-object" style="width:45px">
+                            </div>
+                            <div class="media-body" style="margin: 5px;">
+                                <h4 class="media-heading">(Student Name) <small><i>Posted on January 11, 2020</i></small></h4>
+                                  <h2> Q What is SQL? </h2>
+  
+                                 <div class="textinput" placeholder="Comment">
+                                  SQL is Structured Query language 
+                                 </div> 
+                                 <button class="readmore" type="button" >Read more </button>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media-left media-top" >
+                                <img src="male.jpg" class="media-object" style="width:45px">
+                            </div>
+                            <div class="media-body" style="margin: 5px;">
+                                <h4 class="media-heading">(Student Name) <small><i>Posted on January 11, 2020</i></small></h4>
+                                 <h2> Q What is SQL? </h2>
+  
+                                 <div class="textinput" placeholder="Comment">
+                                  SQL is Structured Query language 
+                                 </div> 
+                                 <button class="readmore" type="button" >Read more </button>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media-left media-top" >
+                                <img src="male.jpg" class="media-object" style="width:45px">
+                            </div>
+                            <div class="media-body" style="margin: 5px;">
+                                <h4 class="media-heading">(Student Name) <small><i>Posted on January 11, 2020</i></small></h4>
+                                 <h2> Q What is SQL? </h2>
+  
+                                 <div class="textinput" placeholder="Comment">
+                                  SQL is Structured Query language 
+                                 </div> 
+                                 <button class="readmore" type="button" >Read more </button>
+                            </div>
+                        </div>
+                </section>
+              </div>
+                     
+             <div class="col-sm-3 ">
+                        <div class="row space">
+                            <aside>
+                                <div class="box2">
+                                    <div class="ava1">
+                                        <div class="img1">
+                                            <a href="#"> <img src="DSC_6275.JPG"> </a>
+                                        </div>
+                                    </div>
+                                    <div class="name1"><a href="#"><h4>@jaybamania</h4></a></div>
+                                    <div class="logout1"><a href="#"><h5>Log Out</h5></a></div>
+                                </div>
+                            </aside>
+                        </div>
+                        <br>
+                        <div class="row space">
+                            <aside>
+                                <div class="box3">
+
+                                </div>
+                            </aside>
+                        </div>             
+             </div>
+        </div>
+
+
+</body>
+</html> 
